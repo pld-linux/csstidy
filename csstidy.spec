@@ -19,7 +19,7 @@ Opensource CSS parser and optimiser.
 %prep
 %setup -qc
 %if 1
-sed -i -e 's,g++,%{__cc},;s,-o,%{rpmcxxflags} -o,' compile.sh
+sed -i -e 's,g++,%{__cxx},;s,-o,%{rpmcxxflags} -o,' compile.sh
 
 %build
 sh -x ./compile.sh
