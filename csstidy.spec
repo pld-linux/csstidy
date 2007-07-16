@@ -1,7 +1,7 @@
 Summary:	Opensource CSS parser and optimiser
 Name:		csstidy
 Version:	1.2
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/csstidy/%{name}-source-%{version}.zip
@@ -9,7 +9,6 @@ Source0:	http://dl.sourceforge.net/csstidy/%{name}-source-%{version}.zip
 URL:		http://csstidy.sourceforge.net/
 BuildRequires:	libstdc++-devel
 BuildRequires:	sed >= 4.0
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
