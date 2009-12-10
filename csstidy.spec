@@ -1,16 +1,15 @@
-# TODO
-# - optlfags
 Summary:	Open Source CSS parser and optimiser
 Summary(pl.UTF-8):	Analizator i optymalizator CSS z otwartymi źródłami
 Name:		csstidy
 Version:	1.4
-Release:	0.3
+Release:	1
 License:	GPL v2+
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/project/csstidy/CSSTidy%20%28C%2B%2B%2C%20stable%29/1.3/%{name}-source-%{version}.zip
-# Source0-md5:	7087cc0c6cfdb42a3e796621a5d12a09
+# Source0-md5:	8fcbf5c1c3cafd9232552b3286aabcb9
 Source1:	http://ftp.debian.org/debian/pool/main/c/csstidy/%{name}_%{version}-3.diff.gz
-# Source1-md5:	8fcbf5c1c3cafd9232552b3286aabcb9
+# Source1-md5:	7087cc0c6cfdb42a3e796621a5d12a09
+Patch0:		scons-optflags.patch
 URL:		http://csstidy.sourceforge.net/
 BuildRequires:	libstdc++-devel
 BuildRequires:	sed >= 4.0
@@ -36,6 +35,7 @@ przeznaczony do sprawdzania poprawności CSS.
 %{__gzip} -dc %{S:1} | %{__patch} -p1
 %{__patch} -p1 < debian/patches/001_emptyfile.dpatch
 %{__patch} -p1 < debian/patches/002_gcc43fix.dpatch
+%patch0 -p1
 
 %build
 %scons
