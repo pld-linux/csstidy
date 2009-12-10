@@ -12,7 +12,9 @@ Source1:	http://ftp.debian.org/debian/pool/main/c/csstidy/%{name}_%{version}-3.d
 Patch0:		scons-optflags.patch
 URL:		http://csstidy.sourceforge.net/
 BuildRequires:	libstdc++-devel
+BuildRequires:	scons
 BuildRequires:	sed >= 4.0
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
