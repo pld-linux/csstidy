@@ -2,7 +2,7 @@ Summary:	Open Source CSS parser and optimiser
 Summary(pl.UTF-8):	Analizator i optymalizator CSS z otwartymi źródłami
 Name:		csstidy
 Version:	1.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/project/csstidy/CSSTidy%20%28C%2B%2B%2C%20stable%29/1.3/%{name}-source-%{version}.zip
