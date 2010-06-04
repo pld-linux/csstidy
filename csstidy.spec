@@ -5,7 +5,7 @@ Version:	1.4
 Release:	2
 License:	GPL v2+
 Group:		Applications/WWW
-Source0:	http://dl.sourceforge.net/project/csstidy/CSSTidy%20%28C%2B%2B%2C%20stable%29/1.3/%{name}-source-%{version}.zip
+Source0:	http://downloads.sourceforge.net/project/csstidy/CSSTidy%20%28C%2B%2B%2C%20stable%29/1.3/%{name}-source-%{version}.zip
 # Source0-md5:	8fcbf5c1c3cafd9232552b3286aabcb9
 Source1:	http://ftp.debian.org/debian/pool/main/c/csstidy/%{name}_%{version}-3.diff.gz
 # Source1-md5:	7087cc0c6cfdb42a3e796621a5d12a09
