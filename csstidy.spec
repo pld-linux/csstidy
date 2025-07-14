@@ -37,7 +37,7 @@ przeznaczony do sprawdzania poprawności CSS.
 %{__gzip} -dc %{SOURCE1} | %{__patch} -p1
 %{__patch} -p1 < debian/patches/001_emptyfile.dpatch
 %{__patch} -p1 < debian/patches/002_gcc43fix.dpatch
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %scons
