@@ -2,7 +2,7 @@ Summary:	Open Source CSS parser and optimiser
 Summary(pl.UTF-8):	Analizator i optymalizator CSS z otwartymi źródłami
 Name:		csstidy
 Version:	1.4
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Applications/WWW
 Source0:	http://downloads.sourceforge.net/csstidy/%{name}-source-%{version}.zip
@@ -10,6 +10,7 @@ Source0:	http://downloads.sourceforge.net/csstidy/%{name}-source-%{version}.zip
 Source1:	http://ftp.debian.org/debian/pool/main/c/csstidy/%{name}_%{version}-3.diff.gz
 # Source1-md5:	7087cc0c6cfdb42a3e796621a5d12a09
 Patch0:		scons-optflags.patch
+Patch1:		%{name}-py3-print.patch
 URL:		http://csstidy.sourceforge.net/
 BuildRequires:	libstdc++-devel
 BuildRequires:	scons
@@ -38,6 +39,7 @@ przeznaczony do sprawdzania poprawności CSS.
 %{__patch} -p1 < debian/patches/001_emptyfile.dpatch
 %{__patch} -p1 < debian/patches/002_gcc43fix.dpatch
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %scons

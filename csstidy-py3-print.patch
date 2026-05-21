@@ -1,0 +1,31 @@
+--- csstidy-1.4/SConstruct.orig
++++ csstidy-1.4/SConstruct
+@@ -6,11 +6,11 @@
+
+ #check if the user has been naughty: only 'debug' or 'release' allowed
+ if not (mymode in ['debug', 'release']):
+-    print "Error: expected 'debug' or 'release', found: " + mymode
++    print("Error: expected 'debug' or 'release', found: " + mymode)
+     Exit(1)
+
+ #tell the user what we're doing
+-print '**** Compiling in ' + mymode + ' mode...'
++print('**** Compiling in ' + mymode + ' mode...')
+
+ CXX = ARGUMENTS.get('CXX')
+ CXXFLAGS = ARGUMENTS.get('CXXFLAGS')
+--- csstidy-1.4/csstidy/SConscript.orig
++++ csstidy-1.4/csstidy/SConscript
+@@ -20,10 +20,10 @@
+     localenv.Append(CXXFLAGS=releasecxxflags)
+
+ #specify the build directory
+-localenv.BuildDir(builddir, ".", duplicate=0)
++localenv.VariantDir(builddir, ".", duplicate=0)
+
+ #Figure out all the source files
+-srclst = map(lambda x: builddir + '/' + x, glob.glob('*.cpp'))
++srclst = list(map(lambda x: builddir + '/' + x, glob.glob('*.cpp')))
+
+ #If running win32 get special version information from the .rc
+ if localenv['PLATFORM'] == 'win32':
